@@ -1,14 +1,19 @@
 <script>
+import FilmList from './FilmList.vue';
 export default {
-    name: 'AppMain'
+    name: 'AppMain',
+    components: {
+        FilmList
+    },
 }
 </script>
 
 <template>
-    <div>
-
-    </div>
+    <main>
+        <!-- Generate Film List -->
+        <FilmList />
+    </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 </style>
