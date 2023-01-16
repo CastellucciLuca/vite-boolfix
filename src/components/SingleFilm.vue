@@ -1,15 +1,20 @@
 <script>
 export default {
-    name: 'SingleFilm',
-    props: ['singleFilm']
+    name: 'SingleFilmInfo',
+    props: ['singleFilm'],
+    data() {
+        return {
+        }
+    }
 }
 </script>
 
 <template>
 
-    <h3>Titolo: {{ singleFilm.title }} </h3>
-    <h4>Titolo originale: {{ singleFilm.original_title }}</h4>
-    <span>Lingua: {{ singleFilm.original_language }}</span>
+    <h3>Titolo: {{ singleFilm.title || singleFilm.name }} </h3>
+    <h4>Titolo originale: {{ singleFilm.original_title || singleFilm.original_name }}</h4>
+    <img :src="`https://crowdin.com/images/flags/${singleFilm.original_language}.png`"
+        :alt="singleFilm.original_language + ' flag'" onerror="this.style.display='none'">
     <br>
     <span>Voto: {{ singleFilm.vote_average }}</span>
 

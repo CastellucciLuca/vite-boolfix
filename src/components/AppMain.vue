@@ -10,7 +10,6 @@ export default {
 
 <template>
     <main>
-        <!-- Generate Film List -->
         <FilmList />
     </main>
 </template>

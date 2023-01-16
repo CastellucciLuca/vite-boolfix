@@ -9,16 +9,23 @@ export default {
   data() {
     return {
       store,
-      apiUrl: 'https://api.themoviedb.org/3/search/movie?'
+      apiKey: 'afbf158776bc993869bf790f7b9b71de',
+      apiUrl: 'https://api.themoviedb.org/3/search/movie?',
+      languageApi: 'it-IT',
+      apiUrlFilm: 'https://api.themoviedb.org/3/search/movie?',
+      apiUrlTv: 'https://api.themoviedb.org/3/search/tv?'
     }
   },
+
   methods: {
+    //FILM ARRAY
     getFilmApi(userQuery) {
-      axios.get(this.apiUrl, {
+      // FILM
+      axios.get(this.apiUrlFilm, {
         params: {
-          api_key: 'afbf158776bc993869bf790f7b9b71de',
-          language: 'it-IT',
-          query: userQuery 
+          api_key: this.apiKey,
+          language: this.languageApi,
+          query: userQuery
         }
       })
         .then(function (response) {
@@ -28,10 +35,22 @@ export default {
         .catch(function (error) {
           console.log(error);
         })
+      // TV SERIES
+      axios.get(this.apiUrlTv, {
+        params: {
+          api_key: this.apiKey,
+          language: this.languageApi,
+          query: userQuery
+        }
+      })
+        .then(function (response) {
+          console.log(response.data.results);
+          store.filmList.push(...response.data.results);
+        })
+        .catch(function (error) {
+          console.log(error);
+        })
     },
-  },
-  created() {
-    // this.getFilmApi(this.apiUrl)
   },
 }
 </script>
