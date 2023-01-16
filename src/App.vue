@@ -10,7 +10,6 @@ export default {
     return {
       store,
       apiKey: 'afbf158776bc993869bf790f7b9b71de',
-      apiUrl: 'https://api.themoviedb.org/3/search/movie?',
       languageApi: 'it-IT',
       apiUrlFilm: 'https://api.themoviedb.org/3/search/movie?',
       apiUrlTv: 'https://api.themoviedb.org/3/search/tv?'
