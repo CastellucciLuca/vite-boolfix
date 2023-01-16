@@ -19,9 +19,19 @@ export default {
     <img :src="`https://crowdin.com/images/flags/${singleFilm.original_language}.png`"
         :alt="singleFilm.original_language + ' flag'" onerror="this.style.display='none'">
     <br>
-    <span>Voto: {{ singleFilm.vote_average }}</span>
+    <div class="star">
+        <span class="vote" v-for="n in Math.ceil(singleFilm.vote_average / 2)">★</span>
+        <span v-for=" in (5 - Math.ceil(singleFilm.vote_average / 2))">★</span>
+    </div>
+
 
 </template>
 
 <style lang="scss" scoped>
+div.star {
+    font-size: 4rem;
+    .vote {
+        color: orange;
+    }
+}
 </style>
