@@ -8,7 +8,6 @@ export default {
     }
 }
 </script>
-
 <template lang="">
     <div class="film-info">
         <h3> <span class="fw-bold">Titolo:</span> {{ singleFilm.title ? singleFilm.title : singleFilm.name }} </h3>
@@ -23,10 +22,8 @@ export default {
             <font-awesome-icon icon="star" class="vote" v-for="n in Math.ceil(singleFilm.vote_average / 2)" />
             <font-awesome-icon icon="star" v-for="n in (5 - Math.ceil(singleFilm.vote_average / 2))" />
         </div>
-        
         <br>
         <div class="overview-text" v-show="singleFilm.overview != '' ">
-
             <p>
                 <span class="fw-bold"> Overview: </span>
                 {{singleFilm.overview}}
@@ -35,7 +32,6 @@ export default {
         
     </div>
 </template>
-
 <style lang="scss" scoped>
 div.film-info {
     overflow: hidden;

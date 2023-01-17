@@ -15,7 +15,6 @@ export default {
     },
 }
 </script>
-
 <template>
     <main>
         <!-- FILM LIST -->
@@ -26,7 +25,6 @@ export default {
         <span v-else-if="store.filmList.length == 0 && store.userSearch != ''">Nessun Film trovato</span>
     </main>
 </template>
-
 <style lang="scss" scoped>
 span {
     color: white;

@@ -14,7 +14,6 @@ export default {
     },
 }
 </script>
-
 <template>
     <header class="d-flex justify-content-between align-items-center p-4">
         <h1 class="main-logo">Boolflix</h1>
@@ -27,7 +26,6 @@ export default {
         </div>
     </header>
 </template>
-
 <style lang="scss" scoped>
 @use '../styles/general.scss' as *;
 @use '../styles/partials/variables' as *;

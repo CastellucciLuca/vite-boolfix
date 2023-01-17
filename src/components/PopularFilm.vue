@@ -16,7 +16,7 @@ export default {
         }
     },
     methods: {
-        //Generate popular Film
+        //TO GENERATE POPULAR FILM
         getPopularFilm() {
             axios.get(this.apiPopularFilm, {
                 params: {
@@ -38,7 +38,6 @@ export default {
     },
 }
 </script>
-
 <template>
     <section id="popular-film">
         <h2>Film Popolari</h2>
@@ -51,7 +50,6 @@ export default {
         </div>
     </section>
 </template>
-
 <style lang="scss">
 section#popular-film {
     padding: 2rem;

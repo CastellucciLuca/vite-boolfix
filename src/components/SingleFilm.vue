@@ -13,18 +13,13 @@ export default {
     }
 }
 </script>
-
 <template>
     <div class="inside-card position-relative">
         <img class="m-auto" :src="posterUrl + singleFilm.poster_path" :alt="singleFilm.title + ' poster'"
             onerror="this.style.display='none'">
         <FilmCardInfo :singleFilm="singleFilm" class="back-card position-absolute top-0 w-100 h-100 p-4" />
     </div>
-
-
-
 </template>
-
 <style lang="scss" scoped>
 div.inside-card {
     width: 342px;
