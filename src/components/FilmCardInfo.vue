@@ -11,9 +11,8 @@ export default {
 
 <template lang="">
     <div class="film-info">
-
-        <h3> <span class="fw-bold">Titolo:</span> {{ singleFilm.title || singleFilm.name }} </h3>
-        <h4><span class="fw-bold">Titolo originale: </span> {{ singleFilm.original_title || singleFilm.original_name }}</h4>
+        <h3> <span class="fw-bold">Titolo:</span> {{ singleFilm.title ? singleFilm.title : singleFilm.name }} </h3>
+        <span class="fw-bold">Titolo originale: </span> {{ singleFilm.original_title ? singleFilm.original_title : singleFilm.original_name }}
         <br>
         <!--<img :src="`https://crowdin.com/images/flags/${singleFilm.original_language}.png`"
         :alt="singleFilm.original_language + ' flag'" onerror="this.style.display='none'"> -->

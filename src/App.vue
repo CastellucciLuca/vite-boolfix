@@ -19,6 +19,7 @@ export default {
   methods: {
     //FILM ARRAY
     getFilmApi(userQuery) {
+      store.filmList = []
       // FILM
       axios.get(this.apiUrlFilm, {
         params: {
